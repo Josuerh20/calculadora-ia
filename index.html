@@ -1,96 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora con IA</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operador IA – Calculadora Inteligente</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-
-    <style>
-        body {
-            background: #eef1f5;
-        }
-        .card {
-            border: none;
-            border-radius: 18px;
-            padding: 30px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.10);
-        }
-        .title {
-            font-weight: 700;
-            color: #2c3e50;
-        }
-        .footer-text {
-            font-size: 0.85em;
-            text-align: center;
-            color: #6c757d;
-            margin-top: 10px;
-        }
-        .creditos {
-            font-size: 0.8em;
-            text-align: center;
-            color: #444;
-            margin-top: 5px;
-            font-style: italic;
-        }
-        input {
-            font-size: 1.1rem;
-            padding: 10px;
-        }
-        .btn-custom {
-            font-size: 1.1rem;
-            padding: 10px;
-            border-radius: 10px;
-            font-weight: 600;
-        }
-    </style>
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
-        <div class="card" style="max-width: 420px; width: 100%;">
-            
-            <h3 class="title text-center mb-4">
-                <i class="bi bi-calculator"></i> Calculadora con IA
-            </h3>
+  <div class="card">
+    <h1>Operador IA</h1>
+    <p>Ingresa una expresión matemática y deja que la inteligencia artificial la procese por ti.</p>
 
-            <form id="formOperacion">
+    <form id="calcForm">
+      <label for="operacion">Introduce tu expresión matemática <span style="color:#ff7272">*</span></label>
+      <textarea id="operacion" name="operacion" placeholder="Ejemplo: (12/4) + 3 * 2" required></textarea>
+      <button id="submitBtn" type="submit">Procesar</button>
+    </form>
 
-                <div class="input-group mb-3">
-                    <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
-                    <input type="text" id="operacion" class="form-control" placeholder="Escribe una operación (ej: 7*3)" required>
-                </div>
+    <div id="resultado"></div>
+  </div>
 
-                <button class="btn btn-primary w-100 btn-custom">
-                    <i class="bi bi-lightning-charge-fill"></i> Calcular
-                </button>
-
-            </form>
-
-            <div id="resultado" class="alert alert-primary mt-3 d-none"></div>
-
-            <p class="footer-text">Desarrollado con IA</p>
-
-            <p class="creditos">Creado por: <strong>Josue Ramírez Hernández</strong></p>
-
-        </div>
-    </div>
-
-    <script>
-        document.getElementById("formOperacion").addEventListener("submit", function(e) {
-            e.preventDefault();
-            const op = document.getElementById("operacion").value;
-
-            // Se conectará a n8n después
-            document.getElementById("resultado").classList.remove("d-none");
-            document.getElementById("resultado").innerText = "Operación ingresada: " + op;
-        });
-    </script>
-
+  <!-- Archivo JS -->
+  <script src="app.js"></script>
 </body>
 </html>
