@@ -1,0 +1,120 @@
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ====== BODY ====== */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1b1f3a, #3a1b27);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+}
+
+/* ====== CARD ====== */
+.card {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.8s ease;
+}
+
+.card h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.card p {
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* ====== FORM ====== */
+form label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+textarea {
+  width: 100%;
+  min-height: 110px;
+  border: none;
+  outline: none;
+  padding: 12px 14px;
+  margin-top: 8px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-size: 15px;
+  resize: none;
+  transition: 0.3s ease;
+}
+
+textarea::placeholder {
+  color: #d8d8d8;
+  opacity: 0.5;
+}
+
+textarea:focus {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.02);
+}
+
+/* ====== BUTTON ====== */
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff4d79, #ff9068);
+  color: #fff;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255, 125, 145, 0.3);
+}
+
+/* ====== RESULTADO ====== */
+#resultado {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.35);
+  border-left: 4px solid #ff4d79;
+  border-radius: 10px;
+  font-size: 18px;
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+/* ====== ANIMACIÓN ====== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
